@@ -61,3 +61,11 @@ A window containing the text `HelloFX` should appear on the screen and the follo
 ```
 [JavaFX Application Thread] INFO  org.openjfx.HelloFX - hellofx!
 ```
+
+
+**Creating installable packages**
+```
+./gradlew jpackage
+```
+
+The packages are created in the `build/jpackage` directory.
