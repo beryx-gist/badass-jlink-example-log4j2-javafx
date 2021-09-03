@@ -1,42 +1,11 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/blob/master/LICENSE)
-[![Build Status](https://img.shields.io/travis/beryx-gist/badass-jlink-example-log4j2-javafx/master.svg?label=Build)](https://travis-ci.org/beryx-gist/badass-jlink-example-log4j2-javafx)
+[![Build Status](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/workflows/Gradle%20Build/badge.svg)](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/actions?query=workflow%3A%22Gradle+Build%22)
 
 ## Badass JLink Plugin Example: log4j2 and JavaFX ##
 
 A small JavaFX application using log4j2 that shows how to use the [Badass JLink Plugin](https://github.com/beryx/badass-jlink-plugin/).
 
-The plugin is configured in `build.gradle` as follows:
-
-```
-plugins {
-    id 'application'
-    id 'org.openjfx.javafxplugin' version '0.0.5'
-    id 'org.beryx.jlink' version '2.1.9'
-}
-
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile 'org.apache.logging.log4j:log4j-core:2.11.1'
-}
-
-javafx {
-    modules = ['javafx.controls']
-}
-
-mainClassName = "hellofx/org.openjfx.HelloFX"
-
-jlink {
-    options = ['--strip-debug', '--compress', '2', '--no-header-files', '--no-man-pages']
-    launcher {
-        name = 'helloFX'
-    }
-    forceMerge('log4j-api')
-}
-```
 
 ### Usage
 **Running with gradle:**
@@ -68,4 +37,6 @@ A window containing the text `HelloFX` should appear on the screen and the follo
 ./gradlew jpackage
 ```
 
-The packages are created in the `build/jpackage` directory.
+The above command will generate the platform-specific installers in the `build/jpackage` directory.
+
+:bulb: You can check the artifacts produced by the [GitHub actions used to build this project](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx) and download an application package for your platform (such as [from here](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/actions/runs/1195589979#artifacts)).
