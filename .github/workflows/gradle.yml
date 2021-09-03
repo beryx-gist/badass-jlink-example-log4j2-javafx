@@ -24,8 +24,8 @@ jobs:
       uses: gradle/wrapper-validation-action@v1
     - name: Execute build
       run: ./gradlew --info --stacktrace build
-    - name: Execute runtime
-      run: ./gradlew --info --stacktrace runtime
+    - name: Execute jlink
+      run: ./gradlew --info --stacktrace jlink
     - name: Execute jpackage
       run: ./gradlew --info --stacktrace jpackage
     - name: Upload DMG as an artifact
