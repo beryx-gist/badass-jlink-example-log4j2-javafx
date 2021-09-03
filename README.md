@@ -39,4 +39,4 @@ A window containing the text `HelloFX` should appear on the screen and the follo
 
 The above command will generate the platform-specific installers in the `build/jpackage` directory.
 
-:bulb: You can check the artifacts produced by the [GitHub actions used to build this project](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx) and download an application package for your platform (such as [from here](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/actions/runs/1195589979#artifacts)).
+:bulb: You can check the artifacts produced by the [GitHub actions used to build this project](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/actions?query=workflow%3A%22Gradle+Build%22) and download an application package for your platform (such as [from here](https://github.com/beryx-gist/badass-jlink-example-log4j2-javafx/actions/runs/1198565779#artifacts)).
